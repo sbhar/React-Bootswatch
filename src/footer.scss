@@ -1,0 +1,19 @@
+.themename:hover {
+	color:gray;
+	cursor:pointer;
+}
+.col-md-6 {
+	width:50%!important;
+	padding-bottom:16px;
+	white-space:nowrap;
+}
+.poped {
+	position:fixed;
+	top:15%;
+	left:15%;
+	z-index:100;
+	display:none;
+}
+.themename {
+	display:none;
+}

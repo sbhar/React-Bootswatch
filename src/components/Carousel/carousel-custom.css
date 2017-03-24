@@ -1,0 +1,5 @@
+@media (min-width: 1250px) {
+  .carousel-slider, .thumbs-wrapper {
+    width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important; } }
