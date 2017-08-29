@@ -9698,10 +9698,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 
-.bg-primary {
+/*.bg-primary {
   background-color: #060606 !important;
   border: 1px solid #282828;
-}
+}*/
 
 .bg-inverse {
   background-color: #282828 !important;

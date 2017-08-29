@@ -9710,10 +9710,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   border-style: solid;
 }
 
-.bg-primary {
+/*.bg-primary {
   background-color: #fff !important;
   border-color: #eeeeee;
-}
+}*/
 
 .bg-inverse {
   background-color: #D9230F !important;

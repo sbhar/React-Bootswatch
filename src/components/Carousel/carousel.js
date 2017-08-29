@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.css'
 import Carousel from 'react-responsive-carousel/lib/components/Carousel.js';
-import './carousel-custom.css';
+//import './carousel-custom.css';
 
 /* images */
 import slide1 from './images/1.jpeg';

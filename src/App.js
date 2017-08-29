@@ -3,12 +3,17 @@ import { Component } from 'react';
 //import logo from './logo.svg';
 //import defaultcss from './bootstrap.css';
 //import slate from './slate.css';
-//import './App.scss';
-
+//import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
+import './font-awesome.css';
+import Tabs from './components/Tabs/tabs.js';
 import Header from './components/Header/header.js';
 import Footer from './components/Footer/footer.js';
 import * as React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import DisplayContainer from './components/Dropdown/dropdown.js';
+
+
 
 
 class App extends Component {
@@ -17,7 +22,10 @@ constructor(props) {
     super(props);
     this.state = {
       modal: true,
-      value: 'default'
+      value: 'default',
+      displayValue: 'Most Recent',
+      active: false,
+      light: 'slate'
     };
 
     this.toggle = this.toggle.bind(this);
@@ -25,15 +33,31 @@ constructor(props) {
     this.change = this.change.bind(this);
 
     this.cancelit = this.cancelit.bind(this);
+
+    this.toggleDrop = this.toggleDrop.bind(this);
+
+    this.themestr = 'default';
 }
+
+
 
 change(event){
          this.setState({value: event.target.value});
          //this.refs.foot.refs.themer.click();
-         console.log('theme :' + event.target.value);
+        // console.log('theme :' + event.target.value);
          //var themename= event.target.value;
          var themestr = (event.target.value).toLowerCase()
          this.refs.foot.refs.styleurl.href = '4-alpha/' + themestr + '/bootstrap.css';
+         /*if(  themestr==='cerulean'){
+            this._child.changenavtheme('cerulean');
+         }else if(  themestr==='lux'){
+            this._child.changenavtheme('lux');
+         }else if(themestr==='slate' || 'darkly' || 'cyborg'){
+            this._child.changenavtheme('dark');
+         }else if(themestr==='default'){
+            this._child.changenavtheme('default');
+         }*/
+
 }
 
 toggle() {
@@ -54,15 +78,35 @@ cancelit() {
 componentDidMount(){
   //console.log('Child value:', this.refs.foot.refs.themer);//accessed footer element 'themer'
   //this.setState({value : 'default'});
+  //this._child.changenavtheme(); // Prints 'bar'
+
 }
 
+toggleDrop() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
 
 render() {
     return ( 
+      
       <div> 
-        <Header />
+        <Header ref={(child) => { this._child = child; }}/>
+          {/*<Tabs />*/}
+
+
+
+
           <div className="container" ref="pageme">
-            {this.props.children}    
+            {this.props.children}   
+
+<DisplayContainer/>
+
+
+
+<Tabs />
+           
           </div>
         <Footer  ref="foot"/>
         <div>
@@ -93,6 +137,11 @@ render() {
               <option value="yeti">Yeti</option>
             </select>
             {/*<p>{this.state.value}</p>*/}
+
+
+             
+
+
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle} ref="confirm" id="xx">Confirm</Button>{' '}
@@ -104,5 +153,6 @@ render() {
     );
   }
 }
+
 
 export default App;

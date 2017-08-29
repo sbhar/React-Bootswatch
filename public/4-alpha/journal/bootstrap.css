@@ -9698,10 +9698,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 
-.bg-primary {
+/*.bg-primary {
   background-color: #fff !important;
   border: 1px solid #eee;
-}
+}*/
 .bg-primary.navbar-fixed-top {
   border-width: 0 0 1px 0;
 }

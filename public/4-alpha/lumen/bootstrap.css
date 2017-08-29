@@ -9703,10 +9703,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   border-width: 0 1px 4px 1px;
 }
 
-.bg-primary {
+/*.bg-primary {
   background-color: #fff !important;
   border-color: #f2f2f2;
-}
+}*/
 
 .bg-inverse {
   background-color: #158CBA !important;

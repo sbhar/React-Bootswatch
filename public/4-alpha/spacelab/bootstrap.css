@@ -9705,7 +9705,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: color ease-in-out .2s;
 }
 
-.bg-primary {
+/*.bg-primary {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, #eee), color-stop(50%, #e4e4e4));
   background-image: -webkit-linear-gradient(white, #eee 50%, #e4e4e4);
   background-image: -o-linear-gradient(white, #eee 50%, #e4e4e4);
@@ -9714,13 +9714,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   -webkit-filter: none;
           filter: none;
   border: 1px solid #d5d5d5;
-}
+}*/
 .bg-primary .nav-link {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 }
-.bg-primary .navbar-brand {
+/*.bg-primary .navbar-brand {
   color: rgba(0, 0, 0, 0.4);
-}
+}*/
 .bg-primary .navbar-brand:hover,
 .bg-primary .nav-item.active .nav-link {
   color: #3399F3;
